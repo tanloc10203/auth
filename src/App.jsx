@@ -8,7 +8,7 @@ function App() {
     <main>
       <nav>
         <div className={navLink}>
-          <NavLink className={({ isActive }) => isActive ? active : ""} to="/login">Đăng nhập</NavLink>
+          <NavLink className={({ isActive }) => isActive ? active : ""} to="/login">Đăng nhập Hello wword</NavLink>
           <NavLink className={({ isActive }) => isActive ? active : ""} to="/register">Đăng ký</NavLink>
           <NavLink className={({ isActive }) => isActive ? active : ""} to="/">Trang chủ</NavLink>
         </div>
