@@ -7,12 +7,12 @@ function App() {
   return (
     <main>
       <nav>
+        <h1>Auth</h1>
         <div className={navLink}>
-          <NavLink className={({ isActive }) => isActive ? active : ""} to="/login">Đăng nhập Hello wword</NavLink>
+          <NavLink className={({ isActive }) => isActive ? active : ""} to="/login">Đăng nhập</NavLink>
           <NavLink className={({ isActive }) => isActive ? active : ""} to="/register">Đăng ký</NavLink>
           <NavLink className={({ isActive }) => isActive ? active : ""} to="/">Trang chủ</NavLink>
         </div>
-        <h1>Auth</h1>
       </nav>
       <Outlet />
     </main>

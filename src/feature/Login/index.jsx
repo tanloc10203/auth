@@ -3,7 +3,7 @@ import InputCustom from '../../components/customForm/InputCusTom';
 import styles from "./login.module.css";
 
 function Login(props) {
-  const { login, loginMain, loginTitle, btnLogin } = styles;
+  const { login, loginMain, loginTitle, btnLogin, dots } = styles;
   return (
     <main className={login}>
       <div className={loginMain}>
@@ -17,7 +17,10 @@ function Login(props) {
             <option value="EN">English</option>
             <option value="JP">Janpan</option>
           </select>
-          <button className={btnLogin}>Đăng nhập</button>
+          <button className={btnLogin}>
+            Đăng nhập
+            {/* <div className={dots}></div> */}
+          </button>
         </div>
       </div>
     </main>
