@@ -7,8 +7,6 @@ const initialState = {
   isRegistered: false,
   isLoading: false,
   errors: {},
-  access_token: "",
-  id_token: "",
 }
 
 const registerPost = createAsyncThunk('register/user', async data => {
@@ -37,8 +35,6 @@ const registerSlice = createSlice({
       state.errors.err = action.payload.data;
       else {
         state.isRegistered = true;
-        state.access_token = action.payload.access_token;
-        state.id_token = action.payload.id_token;
         state.errors.success = "Register success"
         state.password = "";
         state.username = "";

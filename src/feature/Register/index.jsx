@@ -22,9 +22,11 @@ function Register(props) {
     <main className={login}>
       <div className={loginMain}>
         <h1 className={loginTitle}>Đăng Ký</h1>
-        {state.isRegistered
-          ? <p className={success}>{state && state?.errors.success ? state.errors.success : ""}</p>
-          : <p className={error}>{state && state?.errors.err ? state.errors.err : ""}</p>}
+        {
+          state.isRegistered
+            ? <p className={success}>{state && state?.errors.success ? state.errors.success : ""}</p>
+            : <p className={error}>{state && state?.errors.err ? state.errors.err : ""}</p>
+        }
         <div className="login-form">
           <InputCustom
             type="text"
