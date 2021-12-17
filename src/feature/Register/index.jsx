@@ -1,12 +1,9 @@
 import React from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import InputCustom from '../../components/customForm/InputCusTom';
-import styles from "./register.module.css";
 import { registerPost, setState } from './registerSlice';
-import clsx from "clsx";
 
 function Register(props) {
-  const { login, loginMain, loginTitle, btnLogin, dots, error, success } = styles;
   const state = useSelector(state => state.register);
   const dispatch = useDispatch();
 
@@ -19,13 +16,13 @@ function Register(props) {
   }
 
   return (
-    <main className={login}>
-      <div className={loginMain}>
-        <h1 className={loginTitle}>Đăng Ký</h1>
+    <main className="login">
+      <div className="loginMain">
+        <h1 className="loginTitle">Đăng Ký</h1>
         {
           state.isRegistered
-            ? <p className={success}>{state && state?.errors.success ? state.errors.success : ""}</p>
-            : <p className={error}>{state && state?.errors.err ? state.errors.err : ""}</p>
+            ? <p className="success">{state && state?.errors.success ? state.errors.success : ""}</p>
+            : <p className="error">{state && state?.errors.err ? state.errors.err : ""}</p>
         }
         <div className="login-form">
           <InputCustom
@@ -50,13 +47,11 @@ function Register(props) {
           </select>
           {state.isLoading && ""}
           <button
-            className={clsx(btnLogin, {
-              [styles.active]: state.isLoading
-            })}
+            className={state.isLoading ? "active btnLogin" : "btnLogin"}
             onClick={handleRegister}
           >
             Đăng ký
-            {state.isLoading && <div className={dots}></div>}
+            {state.isLoading && <div className="dots"></div>}
           </button>
         </div>
       </div>

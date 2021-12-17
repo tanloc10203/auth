@@ -4,18 +4,18 @@ import { useAuth } from '../../HOC';
 import { getRamdomQuote } from '../../feature/Profile/profileSlice';
 
 function Home(props) {
-    const profile = useAuth("profile");
-    const dispatch = useDispatch();
+  const profile = useAuth("profile");
+  const dispatch = useDispatch();
 
-    React.useEffect(() => {
-        dispatch(getRamdomQuote());
-    }, []);
+  React.useEffect(() => {
+    dispatch(getRamdomQuote());
+  }, []);
 
-    return (
-        <div>
-            {profile && profile.dataGet}
-        </div>
-    )
+  return (
+    <div>
+      {profile && profile.dataGet}
+    </div>
+  )
 }
 
 export default Home
